@@ -6,18 +6,45 @@ This repository documents my practical environment setup and configuration as pa
 
 The project focuses on preparing a development environment, installing essential DevOps tools, configuring containerisation, Kubernetes orchestration, infrastructure automation and AI-assisted development tools.
 
+
 ## 2. Host Environment
 
-| Component             | Specification               |
-| --------------------- | --------------------------- |
-| Host Operating System | Windows 11 Pro              |
-| Linux Environment     | Ubuntu 26.04.1 LTS          |
-| Linux Subsystem       | WSL2                        |
-| Linux Username        | devopsuser                  |
-| System Architecture   | x86_64                      |
-| Installed RAM         | 8GB                         |
-| Processor             | Intel Core i5-4210U         |
-| Package Manager       | APT (Advanced Package Tool) |
+### Windows Environment
+- Host Operating System: Windows 11 Pro
+- System Architecture: x86_64
+- Installed RAM: 8GB
+- Processor: Intel Core i5-4210U
+- Linux Environment: Ubuntu running through WSL2
+
+### Linux Environment
+- Distribution: Ubuntu 26.04.1 LTS
+- Linux Username: devopsuser
+- Linux Home Directory: /home/devopsuser
+- WSL Version: WSL2
+- Linux Kernel: 6.18.58.1-microsoft-standard-WSL2
+
+### Package Manager
+- Package Manager: APT (Advanced Package Tool)
+
+APT was used to update the Ubuntu package lists and upgrade installed packages.
+
+Commands executed:
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+### Version Control
+- Version Control System: Git
+- Git Version: 2.53.0
+- Git Username: white-king1
+- Git Repository: Initialised locally
+- Default Branch: main
+- Initial Commit: 9f90403
+
+Git was installed and configured successfully inside Ubuntu WSL2.
+
 
 ## 3. Project Objectives
 
@@ -82,6 +109,26 @@ sudo apt install git -y
 - Ansible installation.
 - AI-assisted DevOps tools exploration.
 - Final tooling verification and security checks.
+
+
+### Tool Installation Status
+
+| Tool | Current Status |
+|---|---|
+| Git | Installed and verified |
+| VS Code | Available |
+| Docker | Pending |
+| Docker Compose | Pending |
+| kubectl | Pending |
+| Minikube | Pending |
+| Helm | Pending |
+| Terraform | Pending |
+| Ansible | Pending |
+| AWS CLI | Pending |
+| Azure CLI | Pending |
+| Node.js | Pending |
+| jq | Pending |
+
 
 ## 7. Git Verification
 
