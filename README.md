@@ -92,6 +92,10 @@ sudo apt install git -y
 - Git global username configured.
 - Git global email configured.
 - Visual Studio Code installed on Windows.
+- Docker Engine installed and verified.
+- Docker Compose installed and verified.
+- Docker Buildx installed and verified.
+- Docker hello-world container executed successfully.
 
 ### Pending
 
@@ -113,21 +117,22 @@ sudo apt install git -y
 
 ### Tool Installation Status
 
-| Tool | Current Status |
-|---|---|
-| Git | Installed and verified |
-| VS Code | Available |
-| Docker | Pending |
-| Docker Compose | Pending |
-| kubectl | Pending |
-| Minikube | Pending |
-| Helm | Pending |
-| Terraform | Pending |
-| Ansible | Pending |
-| AWS CLI | Pending |
-| Azure CLI | Pending |
-| Node.js | Pending |
-| jq | Pending |
+| Tool           | Current Status         |
+|----------------|------------------------|
+| Git            | Installed and verified |
+| VS Code        | Available              |
+| Docker         | Installed and verified |
+| Docker Compose | Installed and verified |
+| Docker Buildx  | Installed and verified |
+| kubectl        | Pending                |
+| Minikube       | Pending                |
+| Helm           | Pending                |
+| Terraform      | Pending                |
+| Ansible        | Pending                |
+| AWS CLI        | Pending                |
+| Azure CLI      | Pending                |
+| Node.js        | Pending                |
+| jq             | Pending                |
 
 
 ## 7. Git Verification
