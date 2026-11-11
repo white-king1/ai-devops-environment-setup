@@ -127,9 +127,9 @@ sudo apt install git -y
 | Docker         | Installed and verified |
 | Docker Compose | Installed and verified |
 | Docker Buildx  | Installed and verified |
-| kubectl        | Pending                |
-| Minikube       | Pending                |
-| Helm           | Pending                |
+| kubectl        | Installed and verified |
+| Minikube       | Installed and verified |
+| Helm           | Installed and verified |
 | Terraform      | Pending                |
 | Ansible        | Pending                |
 | AWS CLI        | Pending                |
