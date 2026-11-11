@@ -1,0 +1,56 @@
+
+AI DEVOPS ENGINEERING ENVIRONMENT
+Tool Installation and Version Verification Report
+
+Operating System:
+- Host OS: Windows 11 Pro
+- Linux Distribution: Ubuntu 26.04.1 LTS
+- Environment: WSL2
+- Linux Username: devopsuser
+- Package Manager: APT
+- CPU: Intel Core i5-4210U
+- Physical RAM: 8GB
+
+Development Tools:
+- Git: 2.53.0
+- GitHub CLI: 2.103.3
+- Docker Engine: 29.9.3
+- Docker Compose: 5.7.0
+- Docker Buildx: 0.38.1
+
+Kubernetes Tools:
+- kubectl: 1.37.2
+- Minikube: 1.39.0
+- Helm: 4.3.0
+- Kubernetes Cluster: 1.37.2
+
+Cloud and Development Tools:
+- AWS CLI: 2.40.0
+- Azure CLI: 2.92.0
+- Node.js: 22.22.1
+- npm: 9.2.0
+- jq: 1.8.1
+
+Infrastructure as Code and Automation:
+- Terraform: 1.17.2
+- Ansible Package: 13.1.0
+- Ansible Core: 2.20.1
+- Python: 3.14.4
+- Jinja: 3.1.6
+- PyYAML: 6.0.3
+
+Verification Notes:
+- Docker hello-world test completed successfully.
+- Docker Compose Flask and Nginx application deployed successfully.
+- Kubernetes Minikube node reached Ready status.
+- Helm Nginx chart deployed successfully.
+- AWS CLI version verified.
+- Azure CLI version verified.
+- Node.js and npm versions verified.
+- jq version verified.
+- Terraform version verified.
+- Ansible version verified.
+
+Note:
+All listed versions are based on terminal verification during environment setup.
+Cloud account authentication has not been configured as part of this installation report.

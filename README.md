@@ -27,7 +27,7 @@ The environment is being built incrementally, with installation evidence, verifi
 - Linux Kernel: `6.18.58.1-microsoft-standard-WSL2`
 - Package Manager: APT (Advanced Package Tool)
 
-The WSL environment reported approximately 3.8 GiB of available memory to Linux during verification.
+The WSL environment reported approximately 3.8 GiB of total memory during verification.
 
 ### Package Manager
 
@@ -47,7 +47,7 @@ APT was also used to configure and install several development and DevOps tools 
 - Version Control System: Git
 - Git Version: `2.53.0`
 - GitHub Account: `white-king1`
-- Git Repository: `https://github.com/white-king1/ai-devops-environment-setup`
+- Git Repository: https://github.com/white-king1/ai-devops-environment-setup
 - Default Branch: `main`
 - Initial Commit: `9f90403`
 - GitHub CLI Version: `2.103.3`
@@ -70,7 +70,7 @@ The main objectives of this project are to:
 - Install kubectl and Helm.
 - Install AWS CLI and Azure CLI.
 - Install Node.js and jq.
-- Configure Terraform and Ansible.
+- Install Terraform and Ansible.
 - Perform tooling verification and security checks.
 - Document installation procedures, troubleshooting steps and practical exercises.
 
@@ -89,8 +89,7 @@ ai-devops-environment-setup/
 │   └── tool-versions.txt
 │
 ├── screenshots/
-│   ├── Installation and configuration screenshots
-│   └── Kubernetes and Docker evidence
+│   └── *.png
 │
 ├── README.md
 └── .gitignore
@@ -117,19 +116,19 @@ sudo apt install git -y
 sudo apt install jq -y
 ```
 
-Official repositories were configured where required for tools such as Docker, Kubernetes, Helm and Microsoft Azure CLI.
+Official repositories were configured where required for tools such as Docker, Kubernetes, Helm, HashiCorp and Microsoft Azure CLI.
 
 ### Repository Connectivity Note
 
-During Azure CLI installation, APT initially encountered an IPv6 connectivity issue when accessing the Ubuntu security repository.
+During installation, APT initially encountered IPv6 connectivity issues when accessing Ubuntu repositories.
 
-The issue was resolved by forcing APT to use IPv4:
+The issue was temporarily addressed by forcing APT to use IPv4:
 
 ```bash
 sudo apt-get -o Acquire::ForceIPv4=true update
 ```
 
-The update subsequently completed successfully, including access to the Ubuntu security and Microsoft Azure CLI repositories.
+This allowed APT to retrieve package indexes from repositories that were reachable through IPv4.
 
 ## 6. Installation Progress
 
@@ -146,6 +145,7 @@ The update subsequently completed successfully, including access to the Ubuntu s
 - GitHub CLI installed and authenticated.
 - GitHub repository created and connected to the local project.
 - Initial repository pushed to GitHub.
+- Subsequent documentation and screenshot updates pushed to GitHub.
 
 #### Visual Studio Code
 
@@ -197,41 +197,53 @@ The exercise included:
 - Azure CLI installed and verified.
 - AWS and Azure account authentication not yet configured.
 
+#### JavaScript and Data Processing Tools
+
+- Node.js installed and verified.
+- npm installed and verified.
+- jq installed and verified.
+
+#### Infrastructure as Code and Configuration Management
+
+- Terraform installed and verified.
+- Ansible installed and verified.
+- Ansible Core version verified.
+- Python, Jinja and PyYAML dependencies verified.
+
 ### 6.2 Pending Tasks
 
 - Verify Visual Studio Code WSL integration.
-- Explore AI-assisted DevOps tools.
-- Install Node.js.
-- Install jq.
-- Install Terraform.
-- Install Ansible.
-- Complete final tooling verification.
-- Complete security checks.
-- Update the final tool verification report.
+- Explore optional AI-assisted DevOps tools.
+- Complete final consolidated tooling verification.
+- Complete final security checks.
 - Capture any remaining required screenshots.
-- Finalise project documentation and submission evidence.
+- Review and finalise project documentation.
+- Verify configuration files and submission evidence.
+- Perform final Git commit and push.
 
 ### 6.3 Tool Installation Status
 
-| Tool               | Installed Version | Current Status                                |
-| ------------------ | ----------------- | --------------------------------------------- |
-| Git                | 2.53.0            | Installed and verified                        |
-| GitHub CLI         | 2.103.3           | Installed and verified                        |
-| Visual Studio Code | Not recorded      | Installed on Windows; WSL integration pending |
-| Docker Engine      | 29.9.3            | Installed and verified                        |
-| Docker Compose     | 5.7.0             | Installed and verified                        |
-| Docker Buildx      | 0.38.1            | Installed and verified                        |
-| kubectl            | 1.37.2            | Installed and verified                        |
-| Minikube           | 1.39.0            | Installed and verified                        |
-| Helm               | 4.3.0             | Installed and verified                        |
-| AWS CLI            | 2.40.0            | Installed and verified                        |
-| Azure CLI          | 2.92.0            | Installed and verified                        |
-| Node.js            | Not installed     | Pending                                       |
-| jq                 | Not installed     | Pending                                       |
-| Terraform          | Not installed     | Pending                                       |
-| Ansible            | Not installed     | Pending                                       |
+| Tool | Installed Version | Current Status |
+|---|---|---|
+| Git | 2.53.0 | Installed and verified |
+| GitHub CLI | 2.103.3 | Installed and authenticated |
+| Visual Studio Code | Not recorded | Installed on Windows; WSL integration pending |
+| Docker Engine | 29.9.3 | Installed and verified |
+| Docker Compose | 5.7.0 | Installed and verified |
+| Docker Buildx | 0.38.1 | Installed and verified |
+| kubectl | 1.37.2 | Installed and verified |
+| Minikube | 1.39.0 | Installed and verified |
+| Helm | 4.3.0 | Installed and verified |
+| AWS CLI | 2.40.0 | Installed and verified |
+| Azure CLI | 2.92.0 | Installed and verified |
+| Node.js | 22.22.1 | Installed and verified |
+| npm | 9.2.0 | Installed and verified |
+| jq | 1.8.1 | Installed and verified |
+| Terraform | 1.17.2 | Installed and verified |
+| Ansible | 13.1.0 | Installed and verified |
+| Ansible Core | 2.20.1 | Installed and verified |
 
-**Note:** Tool versions are based on the outputs verified during installation. The Node.js version identified as available through Ubuntu APT is `22.22.1`, but it has not yet been installed.
+**Note:** All listed versions are based on terminal verification during environment setup. AWS and Azure CLI account authentication has not been configured.
 
 ## 7. Git Verification
 
@@ -373,13 +385,53 @@ Connectivity and DNS were checked, and the download was subsequently completed s
 
 APT initially experienced IPv6 connectivity problems when accessing the Ubuntu security repository.
 
-The issue was resolved by running APT with:
+The issue was addressed by running APT with:
 
 ```bash
 sudo apt-get -o Acquire::ForceIPv4=true update
 ```
 
 The Azure CLI package was then installed and verified successfully.
+
+### Ansible Installation and WSL2 DNS Resolution
+
+During Ansible installation, APT repeatedly failed to download packages from `archive.ubuntu.com`.
+
+The error reported was:
+
+```text
+Something wicked happened resolving 'archive.ubuntu.com:http'
+(-5 - No address associated with hostname)
+```
+
+Initial network checks confirmed that:
+
+- Internet connectivity through IPv4 was available.
+- Windows successfully resolved `archive.ubuntu.com`.
+- Ubuntu's repository was reachable when DNS was bypassed.
+- DNS resolution inside WSL2 was intermittently failing.
+
+The WSL2 environment was restarted using:
+
+```powershell
+wsl.exe --shutdown
+```
+
+After reopening Ubuntu, DNS resolution and repository connectivity were restored.
+
+Ansible was subsequently installed successfully using:
+
+```bash
+sudo apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=5 install ansible -y
+```
+
+The installation was verified using:
+
+```bash
+ansible --version
+```
+
+This troubleshooting exercise demonstrated the importance of distinguishing DNS resolution problems from general internet connectivity issues.
 
 ## 10. Security Considerations
 
@@ -394,10 +446,12 @@ The Azure CLI package was then installed and verified successfully.
 
 ## 11. Conclusion
 
-This project establishes a practical foundation for learning AI DevOps Engineering through Linux environment configuration, version control, containerisation, Kubernetes orchestration and cloud command-line tooling.
+This project establishes a practical foundation for learning AI DevOps Engineering through Linux environment configuration, version control, containerisation, Kubernetes orchestration, cloud command-line tooling and infrastructure automation.
 
-The host environment, Git/GitHub, Docker, Docker Compose, Kubernetes, Helm, AWS CLI and Azure CLI have been installed and verified.
+The host environment, Git/GitHub, Docker, Docker Compose, Kubernetes, Helm, AWS CLI, Azure CLI, Node.js, npm, jq, Terraform and Ansible have been installed and verified.
 
-The next stage focuses on Node.js, jq, Terraform and Ansible, followed by final verification, security checks and submission documentation.
+Practical exercises involving Docker Compose, Flask, Nginx, Minikube and Helm have also been completed successfully.
 
-This README will continue to be updated as additional tools are installed, tested and verified.
+The remaining work focuses on Visual Studio Code WSL integration, optional AI-assisted DevOps tools, final verification, security checks, screenshots and submission documentation.
+
+This README will continue to be updated as the remaining setup and verification activities are completed.
