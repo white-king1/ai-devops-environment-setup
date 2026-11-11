@@ -3,14 +3,31 @@
 .env.*
 !.env.example
 
-# SSH private keys
+# SSH private keys and certificates
 *.pem
 *.key
 id_rsa
+id_ed25519
+
+# Kubernetes credentials and configuration
+*.kubeconfig
+kubeconfig
+kubeconfig.*
+
+# Terraform files and state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.tfplan
+crash.log
 
 # Temporary files
 *.log
 *.tmp
+*.swp
+*.bak
 
 # Operating system files
 .DS_Store

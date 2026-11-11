@@ -1,0 +1,79 @@
+==============================================
+ AI DEVOPS ENGINEERING - VERIFICATION REPORT
+==============================================
+Date: 2026-11-11T19:45:54+01:00
+
+Checking: Git
+  INSTALLED: /usr/bin/git
+
+Checking: GitHub CLI
+  INSTALLED: /usr/bin/gh
+
+Checking: Docker
+  INSTALLED: /usr/bin/docker
+
+Checking: kubectl
+  INSTALLED: /usr/bin/kubectl
+
+Checking: Minikube
+  INSTALLED: /usr/local/bin/minikube
+
+Checking: Helm
+  INSTALLED: /usr/sbin/helm
+
+Checking: AWS CLI
+  INSTALLED: /usr/local/bin/aws
+
+Checking: Azure CLI
+  INSTALLED: /usr/bin/az
+
+Checking: Node.js
+  INSTALLED: /usr/bin/node
+
+Checking: npm
+  INSTALLED: /usr/bin/npm
+
+Checking: jq
+  INSTALLED: /usr/bin/jq
+
+Checking: Terraform
+  INSTALLED: /usr/bin/terraform
+
+Checking: Ansible
+  INSTALLED: /usr/bin/ansible
+
+==============================================
+ TOOL VERSIONS
+==============================================
+git version 2.53.0
+gh version 2.103.3 (2026-10-26)
+Docker version 29.9.3, build 5457199
+Docker Compose version v5.7.0
+Client Version: v1.37.2
+Kustomize Version: v5.8.1
+minikube version: v1.39.0
+commit: 7a9f6a841470a207de8cf4bafcccee0969d8ba10
+v4.3.0+gbec5b06
+aws-cli/2.40.0 Python/3.14.8 Linux/6.18.58.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.26
+Azure CLI: 2.92.0
+v22.22.1
+9.2.0
+jq-1.8.1
+Terraform v1.17.2
+ansible [core 2.20.1]
+
+==============================================
+ DOCKER SERVICE CHECK
+==============================================
+PASS: Docker daemon is responding.
+
+==============================================
+ KUBERNETES CLUSTER CHECK
+==============================================
+PASS: Minikube is running.
+NAME       STATUS   ROLES           AGE     VERSION
+minikube   Ready    control-plane   6h30m   v1.37.2
+
+==============================================
+RESULT: ALL CHECKS PASSED
+==============================================

@@ -6,7 +6,7 @@ This repository documents my practical environment setup and configuration as pa
 
 The project focuses on preparing a Linux development environment and installing essential DevOps tools for version control, containerisation, Kubernetes orchestration, cloud management, infrastructure automation and AI-assisted development.
 
-The environment is being built incrementally, with installation evidence, verification results and troubleshooting notes documented throughout the project.
+The environment is being built incrementally, with installation evidence, verification results, practical exercises and troubleshooting notes documented throughout the project.
 
 ## 2. Host Environment
 
@@ -16,6 +16,8 @@ The environment is being built incrementally, with installation evidence, verifi
 - System Architecture: x86_64
 - Installed Physical RAM: 8GB
 - Processor: Intel Core i5-4210U
+- Windows C: Drive Free Space: 33.17GB
+- Windows Update Status: Up to date
 - Linux Environment: Ubuntu running through WSL2
 
 ### Linux Environment
@@ -47,7 +49,7 @@ APT was also used to configure and install several development and DevOps tools 
 - Version Control System: Git
 - Git Version: `2.53.0`
 - GitHub Account: `white-king1`
-- Git Repository: https://github.com/white-king1/ai-devops-environment-setup
+- Git Repository: [AI DevOps Environment Setup](https://github.com/white-king1/ai-devops-environment-setup)
 - Default Branch: `main`
 - Initial Commit: `9f90403`
 - GitHub CLI Version: `2.103.3`
@@ -56,6 +58,15 @@ Git and GitHub CLI were installed and configured successfully inside Ubuntu WSL2
 
 Git global identity was configured successfully.
 
+### Visual Studio Code
+
+- Visual Studio Code Version: `1.146.0`
+- Editor Platform: Windows
+- Development Environment: Ubuntu WSL2
+- WSL Integration: Verified
+
+Visual Studio Code was successfully connected to the Ubuntu WSL environment. The project repository was opened from its WSL-accessible directory, and the integrated terminal was verified to use the Linux environment.
+
 ## 3. Project Objectives
 
 The main objectives of this project are to:
@@ -63,7 +74,7 @@ The main objectives of this project are to:
 - Prepare and configure a Linux development environment.
 - Install and configure Git and GitHub integration.
 - Configure Visual Studio Code for development.
-- Explore AI-assisted DevOps tools.
+- Explore optional AI-assisted DevOps tools.
 - Install Docker Engine and Docker Compose.
 - Build and run containerised applications.
 - Set up Kubernetes locally using Minikube.
@@ -86,10 +97,23 @@ ai-devops-environment-setup/
 │   └── devcontainer.json
 │
 ├── reports/
-│   └── tool-versions.txt
+│   ├── tool-versions.txt
+│   └── final-verification.txt
 │
 ├── screenshots/
-│   └── *.png
+│   ├── docker-compose-logs-and-ps.png
+│   ├── flask-api-docker-compose-success.png
+│   ├── flask-api-health-check-json.png
+│   ├── helm-nginx-demo-port-forward.png
+│   ├── helm-nginx-pod-running-status.png
+│   ├── install-aws-cli-via-terminal.png
+│   ├── install-azure-cli-apt-get.png
+│   ├── install-kubectl-and-minikube-wsl.png
+│   ├── kubernetes-nginx-deployment.png
+│   └── minikube-cluster-nodes-status.png
+│
+├── scripts/
+│   └── verify-tools.sh
 │
 ├── README.md
 └── .gitignore
@@ -97,11 +121,14 @@ ai-devops-environment-setup/
 
 ### Directory Description
 
-- `configuration/`: Environment configuration files.
-- `reports/`: Tool installation and version verification reports.
+- `configuration/`: Environment configuration files, including the Bash configuration template and Dev Container configuration.
+- `reports/`: Tool installation, version verification and final verification reports.
 - `screenshots/`: Evidence of software installations, configurations and practical exercises.
+- `scripts/`: Reusable scripts for checking the installed DevOps tools and local services.
 - `README.md`: Main project documentation.
 - `.gitignore`: Files and directories excluded from Git tracking.
+
+The Dev Container configuration has been prepared and validated as JSON. It has not yet been used to build or launch a Dev Container.
 
 ## 5. Package Manager
 
@@ -136,6 +163,10 @@ This allowed APT to retrieve package indexes from repositories that were reachab
 
 #### Host Environment and Version Control
 
+- Windows 11 Pro verified.
+- Windows Update checked and confirmed up to date.
+- Host physical RAM verified at 8GB.
+- Windows C: drive free space verified at 33.17GB.
 - Windows Subsystem for Linux installed.
 - Ubuntu 26.04.1 LTS installed and configured.
 - WSL2 successfully enabled and verified.
@@ -150,7 +181,10 @@ This allowed APT to retrieve package indexes from repositories that were reachab
 #### Visual Studio Code
 
 - Visual Studio Code installed on Windows.
-- WSL development integration still requires final verification.
+- Visual Studio Code version `1.146.0` verified.
+- WSL development integration confirmed.
+- Ubuntu WSL integrated terminal verified.
+- Project repository opened from the WSL-accessible project directory.
 
 #### Containerisation
 
@@ -190,12 +224,13 @@ The exercise included:
 - Nginx application deployed using Helm.
 - Kubernetes deployment and service verified.
 - Nginx application accessed successfully through port forwarding at `http://localhost:8080`.
+- Kubernetes deployment screenshot captured.
 
 #### Cloud Command-Line Tools
 
 - AWS CLI installed and verified.
 - Azure CLI installed and verified.
-- AWS and Azure account authentication not yet configured.
+- AWS and Azure account authentication not configured.
 
 #### JavaScript and Data Processing Tools
 
@@ -210,16 +245,27 @@ The exercise included:
 - Ansible Core version verified.
 - Python, Jinja and PyYAML dependencies verified.
 
-### 6.2 Pending Tasks
+#### Final Tool Verification
 
-- Verify Visual Studio Code WSL integration.
+- Reusable Bash verification script created.
+- Script executable permissions configured.
+- Installed tool availability checked.
+- Tool versions displayed and verified.
+- Docker daemon responsiveness checked.
+- Minikube cluster status checked.
+- Kubernetes node readiness verified.
+- Final verification output saved to `reports/final-verification.txt`.
+- Final verification result: `ALL CHECKS PASSED`.
+
+### 6.2 Remaining Tasks
+
 - Explore optional AI-assisted DevOps tools.
-- Complete final consolidated tooling verification.
-- Complete final security checks.
-- Capture any remaining required screenshots.
-- Review and finalise project documentation.
-- Verify configuration files and submission evidence.
-- Perform final Git commit and push.
+- Perform final repository and security review.
+- Review the final documentation and screenshots.
+- Perform the final Git commit and push to GitHub.
+- Complete the training assignment submission review.
+
+Optional AI-assisted tools have not been treated as installed because they have not yet been installed and verified.
 
 ### 6.3 Tool Installation Status
 
@@ -227,7 +273,7 @@ The exercise included:
 |---|---|---|
 | Git | 2.53.0 | Installed and verified |
 | GitHub CLI | 2.103.3 | Installed and authenticated |
-| Visual Studio Code | Not recorded | Installed on Windows; WSL integration pending |
+| Visual Studio Code | 1.146.0 | Installed; WSL integration verified |
 | Docker Engine | 29.9.3 | Installed and verified |
 | Docker Compose | 5.7.0 | Installed and verified |
 | Docker Buildx | 0.38.1 | Installed and verified |
@@ -243,7 +289,7 @@ The exercise included:
 | Ansible | 13.1.0 | Installed and verified |
 | Ansible Core | 2.20.1 | Installed and verified |
 
-**Note:** All listed versions are based on terminal verification during environment setup. AWS and Azure CLI account authentication has not been configured.
+All listed versions are based on terminal verification during environment setup. AWS and Azure CLI account authentication has not been configured.
 
 ## 7. Git Verification
 
@@ -339,6 +385,52 @@ kubectl port-forward -n nginx-demo service/nginx-demo 8080:80
 ```
 
 The default Nginx welcome page was successfully accessed through the browser.
+
+### 8.3 Automated Environment Verification
+
+A reusable Bash script was created at:
+
+```text
+scripts/verify-tools.sh
+```
+
+The script checks the availability and versions of the installed development and DevOps tools.
+
+It also checks:
+
+- Docker daemon responsiveness.
+- Minikube cluster status.
+- Kubernetes node readiness.
+
+To run the verification script:
+
+```bash
+./scripts/verify-tools.sh
+```
+
+To save the verification output to a report:
+
+```bash
+./scripts/verify-tools.sh | tee reports/final-verification.txt
+```
+
+The final verification report is stored at:
+
+```text
+reports/final-verification.txt
+```
+
+The latest completed verification returned:
+
+```text
+PASS: Docker daemon is responding.
+PASS: Minikube is running.
+
+NAME       STATUS   ROLES           VERSION
+minikube   Ready    control-plane   v1.37.2
+
+RESULT: ALL CHECKS PASSED
+```
 
 ## 9. Troubleshooting and Installation Notes
 
@@ -443,15 +535,23 @@ This troubleshooting exercise demonstrated the importance of distinguishing DNS 
 - Protect GitHub authentication credentials.
 - Remember that membership in the Docker group grants root-equivalent privileges.
 - Use secure authentication and access controls when deploying infrastructure.
+- Keep cloud credentials outside the project repository.
+- Review files before staging and pushing changes to GitHub.
+
+The project's `.gitignore` file includes rules for environment secrets, private keys, Kubernetes credentials, Terraform state files and temporary files.
 
 ## 11. Conclusion
 
 This project establishes a practical foundation for learning AI DevOps Engineering through Linux environment configuration, version control, containerisation, Kubernetes orchestration, cloud command-line tooling and infrastructure automation.
 
-The host environment, Git/GitHub, Docker, Docker Compose, Kubernetes, Helm, AWS CLI, Azure CLI, Node.js, npm, jq, Terraform and Ansible have been installed and verified.
+The host environment, Git/GitHub, Visual Studio Code WSL integration, Docker, Docker Compose, Kubernetes, Helm, AWS CLI, Azure CLI, Node.js, npm, jq, Terraform and Ansible have been installed and verified.
 
 Practical exercises involving Docker Compose, Flask, Nginx, Minikube and Helm have also been completed successfully.
 
-The remaining work focuses on Visual Studio Code WSL integration, optional AI-assisted DevOps tools, final verification, security checks, screenshots and submission documentation.
+A reusable verification script was created to check the installed tools, Docker service and Kubernetes cluster. The final verification report confirmed that all checks passed.
 
-This README will continue to be updated as the remaining setup and verification activities are completed.
+Installation evidence, configuration files, screenshots and verification reports are organised within the repository.
+
+The remaining work focuses on the final repository review, optional AI-assisted tools and submission preparation.
+
+This README will continue to be updated as the project progresses.
