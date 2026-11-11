@@ -1,0 +1,22 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# SSH private keys
+*.pem
+*.key
+id_rsa
+
+# Temporary files
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
