@@ -95,7 +95,10 @@ sudo apt install git -y
 - Docker Engine installed and verified.
 - Docker Compose installed and verified.
 - Docker Buildx installed and verified.
-- Docker hello-world container executed successfully.
+- Docker hello-world container executed successfully with sudo.
+- Docker group access configured for the `devopsuser` account.
+- Docker commands successfully executed without sudo.
+- Docker hello-world container executed successfully without sudo.
 
 ### Pending
 
