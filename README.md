@@ -111,6 +111,8 @@ ai-devops-environment-setup/
 │   ├── install-kubectl-and-minikube-wsl.png
 │   ├── kubernetes-nginx-deployment.png
 │   └── minikube-cluster-nodes-status.png
+    ├── github-profile-page.png
+│   └── .png  
 │
 ├── scripts/
 │   └── verify-tools.sh
